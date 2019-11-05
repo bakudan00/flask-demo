@@ -7,7 +7,15 @@
     <title></title>
 </head>
 <body>
-    <h1>Hello, {{name}}! how are you!</h1>
-    <img src="../static/images/MQHYB.jpg" alt="index"/>
+    <!-- <h1>Hello, {{name}}! how are you!</h1>
+    <img src="../static/images/MQHYB.jpg" alt="index"/> -->
+    {% if signed_in %}
+        <h1>Welcome back!</h1>
+        <button>Sign Out</button>
+    {% else %}
+        <h1>Hello stranger!</h1>
+        <button>Sign In</button>
+        <button>Sign Up</button>
+    {% endif %}
 </body>
 </html>
