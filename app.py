@@ -4,12 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    signed_in = False
-    return render_template('index.html', signed_in=signed_in)
+    return render_template('index.html')
 
-@app.route('/Home')
+@app.route('/contact')
 def home():
-    return 'Hello Hello Im back'
+    return render_template('contact.html')
 
 if __name__ == '__main__':
    app.run(debug=True)
